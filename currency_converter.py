@@ -21,3 +21,9 @@ class currencyConverter: # Create class
         Entry(window, textvariable = self.conversionRate, bg = "white", justify = RIGHT).grid(row = 2, column = 2)
         self.convertedAmount = StringVar()
         lblConvertedAmount = Label(window, textvariable = self.convertedAmount, bg = "yellow", font = "Helvetica 12 bold").gird(row = 3, column = 2, sticky = E)
+
+        # Create convert and clear buttons. When clicked, the convert and clear functions are called
+        btnConvertedAmount = Button(window, text = "Convert", font = "Helvetica 12 bold", bg = "blue", fg = "white", command = self.convert).grid(row = 4, column = 1, sticky = E)
+        btnDeleteAll = Button(window, text = "Clear", font = "Helvetica 12 bold", bg = "red", fg = "white", command = self.clear).grid(row = 4, column = 6, padx = 25, pady = 25, sticky = E)
+
+        window.mainloop()
