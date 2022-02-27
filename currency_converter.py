@@ -26,4 +26,16 @@ class currencyConverter: # Create class
         btnConvertedAmount = Button(window, text = "Convert", font = "Helvetica 12 bold", bg = "blue", fg = "white", command = self.convert).grid(row = 4, column = 1, sticky = E)
         btnDeleteAll = Button(window, text = "Clear", font = "Helvetica 12 bold", bg = "red", fg = "white", command = self.clear).grid(row = 4, column = 6, padx = 25, pady = 25, sticky = E)
 
-        window.mainloop()
+        window.mainloop() # Runs the application program
+
+        # Function to do the conversion. Stores inputs and performs conversion
+        def convert(self):
+            amount = float(self.conversionRate.get())
+            convertedAmount = float(self.amountToConvert.get()) * amount
+            self.convertedAmount.set(format(convertedAmount, '10.2f'))
+        
+        # Function to clear all the inputs
+        def clear(self):
+            self.amountToConvert.set("")
+            self.conversionRate.set("")
+            self.convertedAmount.set("")
