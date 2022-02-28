@@ -4,6 +4,7 @@ from time import strftime # function within the time module that retrieves you c
 
 root = Tk() # Create tkinter window
 root.title("Digital Clock") # Title
+root.minsize(300,200)
  
 # Function used to display time on the label
 def time(): 
@@ -12,10 +13,11 @@ def time():
     lbl.after(1000, time)
 
 # Styling label widget
-lbl = Label(root, font = ("arial", 160, "bold"), bg = "black", fg = "white")
+lbl = Label(root, font = ("Century Gothic", 80), bg = "#0e1013", fg = "#d3d3d3")
 
 # Pack method in tkinter packs widget into rows or columns
 lbl.pack(anchor = "center", fill = "both", expand = 1)
+
 
 time() # Time functions is called
 
