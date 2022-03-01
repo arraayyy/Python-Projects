@@ -58,3 +58,8 @@ Button4.pack(fill = tk.X) # packs the unpause button
 playlist.pack(fill = "both", expand = "yes") # packs the listbox
 
 musicPlayer.mainloop()
+
+
+#EDIT :
+# NOT WORKING IDK WHY, BUT IT HAS NO ERROS
+# WINDOW NOT LAUNCHING
