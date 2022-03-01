@@ -1,4 +1,6 @@
 from msilib.schema import Directory
+from textwrap import fill
+from turtle import width
 import pygame # module for creating video games, includse computer graphics and sound libraries
 import tkinter as tk # module for creating GUI applications
 from tkinter.filedialog import askdirectory # module for opening a directory
@@ -35,3 +37,24 @@ def pause(): # defines the pause function
 
 def unpause(): # defines the unpause function
     pygame.mixer.music.unpause() # unpauses the song
+
+Button1 = tk.Button(musicPlayer, width = 5, height = 3, text = "Play", font = "Helvetica 12 bold",
+                    command = play, bg = "red", fg = "white") # creates a play button
+Button2 = tk.Button(musicPlayer, width = 5, height = 3, text = "Stop", font = "Helvetica 12 bold",
+                    command = stop, bg = "purple", fg = "white") # creates a stop button
+Button3 = tk.Button(musicPlayer, width = 5, height = 3, text = "Pause", font = "Helvetica 12 bold",
+                    command = pause, bg = "green", fg = "white") # creates a pause button
+Button4 = tk.Button(musicPlayer, width = 5, height = 3, text = "Unpause", font = "Helvetica 12 bold",
+                    command = unpause, bg = "blue", fg = "white") # creates an unpause button 
+
+var = tk.StringVar() # creates a variable
+songtitle = tk.Label(musicPlayer, textvariable = var, font = "Helvetica 12 bold") # creates a label
+
+songtitle.pack() # packs the label
+Button1.pack(fill = tk.X) # packs the play button
+Button2.pack(fill = tk.X) # packs the stop button
+Button3.pack(fill = tk.X) # packs the pause button
+Button4.pack(fill = tk.X) # packs the unpause button
+playlist.pack(fill = "both", expand = "yes") # packs the listbox
+
+musicPlayer.mainloop()
