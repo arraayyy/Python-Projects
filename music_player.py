@@ -21,3 +21,17 @@ for item in songlist: # loops through the songlist
 
 pygame.init() # initializes pygame
 pygame.mixer.init() # initializes the mixer, which allows the program to play music
+
+def play(): # defines the play function
+    pygame.mixer.music.load(playlist.get(tk.ACTIVE)) # loads the song into the mixer
+    var.set(playlist.get(tk.ACTIVE)) # sets the variable to the song that is currently playing
+    pygame.mixer.music.play() # plays the song
+
+def stop(): # defines the stop function
+    pygame.mixer.music.stop() # stops the song
+
+def pause(): # defines the pause function
+    pygame.mixer.music.pause() # pauses the song
+
+def unpause(): # defines the unpause function
+    pygame.mixer.music.unpause() # unpauses the song
