@@ -1,6 +1,6 @@
 # Python Projects
-    > Currency Converter
-    > Digital Clock
-    > Music Player
-    > Slide Show Image
-    > Loan Calculator
+    Currency Converter
+    Digital Clock
+    Music Player
+    Slide Show Image
+    Loan Calculator
