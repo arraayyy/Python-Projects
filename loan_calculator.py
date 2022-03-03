@@ -38,9 +38,9 @@ class LoanCalculator:
         totalPayment = float(self.monthlyPaymentVar.get()) * 12 * int(self.numberOfYearsVar.get())
         self.totalPaymentVar.set(format(totalPayment, '10.2f'))
 
-    def getMonthlyPayement(self, loanAmount, monthlyInterestRate, numberofYears):
-        monthlyPayment = loanAmount * monthlyInterestRate / (1-1/(1 + monthlyInterestRate)** (numberofYears * 12))
-        return monthlyPayment;
+    def getMonthlyPayment(self,loanAmount,monthlyInterestRate,numberofYears):
+        monthlyPayment = loanAmount * monthlyInterestRate / (1-1/(1 + monthlyInterestRate)** (numberofYears * 12 ))
+        return monthlyPayment
     
     def delete_all(self):
         self.annualInterestRateVar.set("")
